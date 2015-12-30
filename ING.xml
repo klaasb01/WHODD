@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <RECORD>
+  <FIELD ID="1" xsi:type="CharFixed"   LENGTH="10"/>
+  <FIELD ID="2" xsi:type="CharFixed"  LENGTH="8"/>
+  <FIELD ID="3" xsi:type="CharFixed"   LENGTH="10"/>
+  <FIELD ID="4" xsi:type="CharFixed"   LENGTH="15"/>
+  <FIELD ID="5" xsi:type="CharFixed"  LENGTH="15"/>
+  <FIELD ID="6" xsi:type="CharFixed"   LENGTH="10"/>
+  <FIELD ID="7" xsi:type="CharFixed"   LENGTH="10"/>
+  <FIELD ID="8" xsi:type="CharFixed"  LENGTH="10"/>
+  <FIELD ID="24" xsi:type="CharTerm" TERMINATOR="\r\n" LENGTH="2"/>
+
+ </RECORD>
+ <ROW>
+  <COLUMN SOURCE="1" NAME="[Ingredient_Id]"  xsi:type="SQLCHAR" />
+  <COLUMN SOURCE="2" NAME="[Create_Date]" xsi:type="SQLDATETIM4" />
+  <COLUMN SOURCE="3" NAME="[Substance_Id]" xsi:type="SQLCHAR" />
+  <COLUMN SOURCE="4" NAME="[Quantity]" xsi:type="SQLCHAR" />
+  <COLUMN SOURCE="5" NAME="[Quantity-2]" xsi:type="SQLCHAR" />
+  <COLUMN SOURCE="6" NAME="[Unit]" xsi:type="SQLCHAR" />
+  <COLUMN SOURCE="7" NAME="[Pharmproduct_Id]" xsi:type="SQLCHAR" />
+  <COLUMN SOURCE="8" NAME="[Medicinalprod_Id]" xsi:type="SQLCHAR" />
+ </ROW>
+</BCPFORMAT>
