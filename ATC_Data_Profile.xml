@@ -1,0 +1,940 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{78B3C80A-4B50-477B-A569-50F913DB1E88}" Name="ATC_Data_Profile.xml">
+      <DtsConnectionManagerID>ATC_Data_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0CA6B951-2425-4F09-896D-FFE7902AF619}" Name="FL88759W7_SQLExpress.WHODDE">
+      <DtsConnectionManagerID>FL88759W7_SQLExpress.WHODDE</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{02E5B28D-F210-4C86-8582-E548FD7DD3D8}" Name="Flat File MP">
+      <DtsConnectionManagerID>Flat File MP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}" Name="nasy00sql004dq.WHODDE">
+      <DtsConnectionManagerID>nasy00sql004dq.WHODDE</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ATC" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ATC" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ATC" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ATC" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ATC" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <Column Name="ATCCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <Column Name="Level" SqlDbType="VarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <Column Name="Text" SqlDbType="VarChar" MaxLength="110" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <Column Name="ATCCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>5</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>96</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>14</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>267</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>882</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <Column Name="Level" SqlDbType="VarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>1</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>1259</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <Column Name="Text" SqlDbType="VarChar" MaxLength="110" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>4</MinLength>
+        <MaxLength>92</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>51</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>46</Length>
+            <Count>20</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>69</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>92</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>33</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>75</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>34</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>15</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>52</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>72</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>66</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>78</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>32</Length>
+            <Count>32</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>41</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>16</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>35</Length>
+            <Count>21</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>86</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>63</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>55</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>43</Length>
+            <Count>13</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>49</Length>
+            <Count>18</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>67</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>47</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>42</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>58</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>64</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>38</Length>
+            <Count>19</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>44</Length>
+            <Count>19</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>14</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>50</Length>
+            <Count>10</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>28</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>47</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>24</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>34</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>15</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>61</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>41</Length>
+            <Count>16</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>65</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>34</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>73</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>29</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>36</Length>
+            <Count>18</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>24</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>62</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>42</Length>
+            <Count>19</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>56</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>42</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>59</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>33</Length>
+            <Count>21</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>39</Length>
+            <Count>15</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>36</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>53</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>45</Length>
+            <Count>10</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>48</Length>
+            <Count>15</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>71</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>77</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>33</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>31</Length>
+            <Count>37</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>60</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>40</Length>
+            <Count>22</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>34</Length>
+            <Count>19</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>31</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>54</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>43</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>45</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>57</Length>
+            <Count>8</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>30</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>37</Length>
+            <Count>23</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>51</Length>
+            <Count>11</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <KeyColumns>
+          <Column Name="ATCCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <Column Name="ATCCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1259</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <Column Name="Level" SqlDbType="VarChar" MaxLength="1" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>4</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>3</Value>
+            <Count>267</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>2</Value>
+            <Count>96</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>1</Value>
+            <Count>14</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>4</Value>
+            <Count>882</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ATC" RowCount="1259" />
+        <Column Name="Text" SqlDbType="VarChar" MaxLength="110" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1098</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>ACE INHIBITORS, PLAIN                                                                                         </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ALL OTHER NON-THERAPEUTIC PRODUCTS                                                                            </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ALL OTHER THERAPEUTIC PRODUCTS                                                                                </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ALLERGENS                                                                                                     </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Alpha- and beta-adrenoreceptor agonists                                                                       </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Alpha-adrenoreceptor antagonists                                                                              </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Amino acids                                                                                                   </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AMPHENICOLS                                                                                                   </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANESTHETICS, LOCAL                                                                                            </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANGIOTENSIN II ANTAGONISTS, PLAIN                                                                             </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Antiallergic agents, excl. corticosteroids                                                                    </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Antibiotics                                                                                                   </Value>
+            <Count>8</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Anticholinergics                                                                                              </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Anticholinesterases                                                                                           </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIDIARRHEAL MICROORGANISMS                                                                                  </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIEMETICS AND ANTINAUSEANTS                                                                                 </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIEPILEPTICS                                                                                                </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIFUNGALS FOR SYSTEMIC USE                                                                                  </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIGOUT PREPARATIONS                                                                                         </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIHISTAMINES FOR SYSTEMIC USE                                                                               </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Antiinfectives                                                                                                </Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIINFLAMMATORY AGENTS                                                                                       </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIMYCOTICS FOR SYSTEMIC USE                                                                                 </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIOBESITY PREPARATIONS, EXCL. DIET PRODUCTS                                                                 </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIPROPULSIVES                                                                                               </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIPRURITICS, INCL. ANTIHISTAMINES, ANESTHETICS, ETC.                                                        </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTISEPTICS AND DISINFECTANTS                                                                                 </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTITHROMBOTIC AGENTS                                                                                         </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ANTIVERTIGO PREPARATIONS                                                                                      </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Antivirals                                                                                                    </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Arsenic compounds                                                                                             </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BACTERIAL AND VIRAL VACCINES, COMBINED                                                                        </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Barbiturates, plain                                                                                           </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Benzodiazepine derivatives                                                                                    </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BETA BLOCKING AGENTS                                                                                          </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Biguanides                                                                                                    </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CALCIUM                                                                                                       </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CALCIUM CHANNEL BLOCKERS AND DIURETICS                                                                        </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CARDIOVASCULAR SYSTEM                                                                                         </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>COMBINATIONS OF ANTIBACTERIALS                                                                                </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Corticosteroids                                                                                               </Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CORTICOSTEROIDS AND ANTIINFECTIVES IN COMBINATION                                                             </Value>
+            <Count>5</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CORTICOSTEROIDS FOR SYSTEMIC USE, COMBINATIONS                                                                </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CORTICOSTEROIDS, PLAIN                                                                                        </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DIAGNOSTIC AGENTS                                                                                             </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DIGESTIVES, INCL. ENZYMES                                                                                     </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DRUGS FOR CONSTIPATION                                                                                        </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DRUGS FOR FUNCTIONAL GASTROINTESTINAL DISORDERS                                                               </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DRUGS FOR TREATMENT OF LEPRA                                                                                  </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>EMOLLIENTS AND PROTECTIVES                                                                                    </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Enzymes                                                                                                       </Value>
+            <Count>6</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Ergot alkaloids                                                                                               </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Estren derivatives                                                                                            </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ESTROGENS                                                                                                     </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Fluoroquinolones                                                                                              </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Glucocorticoids                                                                                               </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GLYCOGENOLYTIC HORMONES                                                                                       </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Guanidine derivatives                                                                                         </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Imidazole derivatives                                                                                         </Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IMMUNE SERA                                                                                                   </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IMMUNOSTIMULANTS                                                                                              </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IMMUNOSUPPRESSANTS                                                                                            </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Indium (111In) compounds                                                                                      </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Iodine (131I) compounds                                                                                       </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IODINE THERAPY                                                                                                </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Local anesthetics                                                                                             </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MEDICATED DRESSINGS                                                                                           </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MULTIVITAMINS, PLAIN                                                                                          </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MUSCLE RELAXANTS                                                                                              </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Nicotinic acid and derivatives                                                                                </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Nitrofuran derivatives                                                                                        </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Nitroimidazole derivatives                                                                                    </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Non-selective beta-adrenoreceptor agonists                                                                    </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER ALIMENTARY TRACT AND METABOLISM PRODUCTS                                                                </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER ANALGESICS AND ANTIPYRETICS                                                                             </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER ANTIANEMIC PREPARATIONS                                                                                 </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other antibacterials                                                                                          </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER ANTIDIARRHEALS                                                                                          </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER ANTINEOPLASTIC AGENTS                                                                                   </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other cardiac preparations                                                                                    </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER DERMATOLOGICAL PREPARATIONS                                                                             </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other diagnostic agents                                                                                       </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER DRUGS FOR DISORDERS OF THE MUSCULO-SKELETAL SYSTEM                                                      </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other drugs for obstructive airway diseases, inhalants                                                        </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other gynecologicals                                                                                          </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER HEMATOLOGICAL AGENTS                                                                                    </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other nervous system drugs                                                                                    </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER OPHTHALMOLOGICALS                                                                                       </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>OTHER PLAIN VITAMIN PREPARATIONS                                                                              </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other respiratory system products                                                                             </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Other systemic drugs for obstructive airway diseases                                                          </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PARASYMPATHOMIMETICS                                                                                          </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PARATHYROID HORMONES AND ANALOGUES                                                                            </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PERIPHERAL VASODILATORS                                                                                       </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Phenylalkylamine derivatives                                                                                  </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>POTASSIUM                                                                                                     </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Progestogens                                                                                                  </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Progestogens and estrogens, fixed combinations                                                                </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Progestogens and estrogens, sequential preparations                                                           </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PROPULSIVES                                                                                                   </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Prostaglandins                                                                                                </Value>
+            <Count>3</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Quinoline derivatives                                                                                         </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RESPIRATORY SYSTEM                                                                                            </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Selective beta-2-adrenoreceptor agonists                                                                      </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>STOMATOLOGICAL PREPARATIONS                                                                                   </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sulfonamides                                                                                                  </Value>
+            <Count>4</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sulfonamides and potassium in combination                                                                     </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sulfonamides, plain                                                                                           </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Technetium (99mTc) compounds                                                                                  </Value>
+            <Count>7</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TETRACYCLINES                                                                                                 </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>THROAT PREPARATIONS                                                                                           </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TONICS                                                                                                        </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TOPICAL PRODUCTS FOR JOINT AND MUSCULAR PAIN                                                                  </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Triazole derivatives                                                                                          </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ULTRASOUND CONTRAST MEDIA                                                                                     </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>UROLOGICALS                                                                                                   </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Vitamins                                                                                                      </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Xanthine derivatives                                                                                          </Value>
+            <Count>2</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
