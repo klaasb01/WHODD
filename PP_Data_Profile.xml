@@ -1,0 +1,765 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{0AC313EF-3D71-49B6-AC96-5F10167ABF0B}" Name="PP_Data_Profile.xml">
+      <DtsConnectionManagerID>PP_Data_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0CA6B951-2425-4F09-896D-FFE7902AF619}" Name="FL88759W7_SQLExpress.WHODDE">
+      <DtsConnectionManagerID>FL88759W7_SQLExpress.WHODDE</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{02E5B28D-F210-4C86-8582-E548FD7DD3D8}" Name="Flat File MP">
+      <DtsConnectionManagerID>Flat File MP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}" Name="nasy00sql004dq.WHODDE">
+      <DtsConnectionManagerID>nasy00sql004dq.WHODDE</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="PP" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="PP" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="PP" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="PP" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="PP" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="Pharmproduct_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="PharmaceuticalForm" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="RouteOfAdministration" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="Medicinalprod_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="NumberOfIngredients" SqlDbType="VarChar" MaxLength="2" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="CreateDate" SqlDbType="VarChar" MaxLength="8" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="Pharmproduct_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>872</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>803338</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>1587668</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>8039</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>75533</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>85</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="PharmaceuticalForm" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>3</MinLength>
+        <MaxLength>3</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>2475544</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="RouteOfAdministration" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>0</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>2475544</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="Medicinalprod_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>7</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>872</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>803478</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>1587315</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>8040</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>75745</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>85</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="NumberOfIngredients" SqlDbType="VarChar" MaxLength="2" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>0</MinLength>
+        <MaxLength>2</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>0</Length>
+            <Count>1183</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>2474361</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="CreateDate" SqlDbType="VarChar" MaxLength="8" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>8</MinLength>
+        <MaxLength>8</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>2475544</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <KeyColumns>
+          <Column Name="Pharmproduct_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="Pharmproduct_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2475544</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="PharmaceuticalForm" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>204</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>251       </Value>
+            <Count>34220</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>475       </Value>
+            <Count>18351</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>351       </Value>
+            <Count>3625</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>209       </Value>
+            <Count>10727</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>150       </Value>
+            <Count>103769</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>429       </Value>
+            <Count>2994</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>261       </Value>
+            <Count>7040</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>453       </Value>
+            <Count>9937</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>107       </Value>
+            <Count>4939</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>430       </Value>
+            <Count>2872</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>378       </Value>
+            <Count>10823</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>262       </Value>
+            <Count>3563</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>405       </Value>
+            <Count>3177</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>377       </Value>
+            <Count>9010</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>104       </Value>
+            <Count>8729</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>176       </Value>
+            <Count>2660</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>250       </Value>
+            <Count>26676</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>350       </Value>
+            <Count>3465</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>404       </Value>
+            <Count>3211</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>128       </Value>
+            <Count>11113</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>200       </Value>
+            <Count>2753</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>376       </Value>
+            <Count>4056</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>428       </Value>
+            <Count>4855</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>450       </Value>
+            <Count>3830</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>264       </Value>
+            <Count>4567</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>375       </Value>
+            <Count>32268</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>557       </Value>
+            <Count>3108</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>279       </Value>
+            <Count>3508</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>206       </Value>
+            <Count>2505</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>426       </Value>
+            <Count>35452</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>125       </Value>
+            <Count>33854</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>159       </Value>
+            <Count>7682</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>525       </Value>
+            <Count>10043</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>105       </Value>
+            <Count>4321</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>001       </Value>
+            <Count>1456439</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>258       </Value>
+            <Count>16000</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>252       </Value>
+            <Count>4495</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>127       </Value>
+            <Count>140532</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>201       </Value>
+            <Count>2668</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>454       </Value>
+            <Count>2683</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>425       </Value>
+            <Count>14417</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>100       </Value>
+            <Count>257845</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>260       </Value>
+            <Count>23802</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>257       </Value>
+            <Count>11250</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>427       </Value>
+            <Count>5982</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>452       </Value>
+            <Count>18613</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>500       </Value>
+            <Count>25959</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>101       </Value>
+            <Count>7214</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>400       </Value>
+            <Count>4914</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="RouteOfAdministration" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>1</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>          </Value>
+            <Count>2475544</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <KeyColumns>
+          <Column Name="Medicinalprod_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="Medicinalprod_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2475544</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="NumberOfIngredients" SqlDbType="VarChar" MaxLength="2" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>37</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>03</Value>
+            <Count>99626</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>09</Value>
+            <Count>3729</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>06</Value>
+            <Count>11498</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>11</Value>
+            <Count>2747</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>01</Value>
+            <Count>1961640</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>10</Value>
+            <Count>3170</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>07</Value>
+            <Count>6839</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>04</Value>
+            <Count>41201</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>05</Value>
+            <Count>20406</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>02</Value>
+            <Count>307213</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>08</Value>
+            <Count>4902</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="PP" RowCount="2475544" />
+        <Column Name="CreateDate" SqlDbType="VarChar" MaxLength="8" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>2556</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>20051229</Value>
+            <Count>123076</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20120201</Value>
+            <Count>6236</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20121127</Value>
+            <Count>3447</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20121219</Value>
+            <Count>2780</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20130123</Value>
+            <Count>2743</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20111101</Value>
+            <Count>8350</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20131126</Value>
+            <Count>25320</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20111213</Value>
+            <Count>5263</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20130506</Value>
+            <Count>2776</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20111130</Value>
+            <Count>2558</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>19851231</Value>
+            <Count>17217</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20060114</Value>
+            <Count>26836</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20101119</Value>
+            <Count>2908</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20051219</Value>
+            <Count>6543</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20081218</Value>
+            <Count>2628</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20030630</Value>
+            <Count>2863</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20110201</Value>
+            <Count>9041</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20131121</Value>
+            <Count>5723</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20100524</Value>
+            <Count>2635</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20121101</Value>
+            <Count>22604</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20100501</Value>
+            <Count>8970</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20101108</Value>
+            <Count>3091</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20041231</Value>
+            <Count>36352</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20120113</Value>
+            <Count>7482</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20080125</Value>
+            <Count>267930</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20070912</Value>
+            <Count>3435</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20100504</Value>
+            <Count>2511</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20130201</Value>
+            <Count>7192</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20101101</Value>
+            <Count>14111</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20100510</Value>
+            <Count>3421</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20050331</Value>
+            <Count>67671</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20120801</Value>
+            <Count>2834</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20060113</Value>
+            <Count>7042</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20050630</Value>
+            <Count>54882</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20101112</Value>
+            <Count>4885</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20130121</Value>
+            <Count>2596</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20140213</Value>
+            <Count>4158</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20050930</Value>
+            <Count>114172</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20130806</Value>
+            <Count>2680</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20131101</Value>
+            <Count>10568</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20130204</Value>
+            <Count>2633</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20110501</Value>
+            <Count>20866</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20130108</Value>
+            <Count>2698</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20111207</Value>
+            <Count>8573</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20121217</Value>
+            <Count>2562</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20101109</Value>
+            <Count>2519</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20140408</Value>
+            <Count>3240</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20130501</Value>
+            <Count>4947</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20091130</Value>
+            <Count>4294</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20051228</Value>
+            <Count>174351</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20051230</Value>
+            <Count>169987</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20100526</Value>
+            <Count>2616</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20051227</Value>
+            <Count>104459</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20090115</Value>
+            <Count>3255</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>20131105</Value>
+            <Count>13169</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
