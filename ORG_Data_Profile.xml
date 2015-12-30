@@ -1,0 +1,808 @@
+<?xml version="1.0"?>
+<DataProfile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.microsoft.com/sqlserver/2008/DataDebugger/">
+  <ProfileVersion>1.0</ProfileVersion>
+  <DataSources>
+    <DtsDataSource ID="{5D7D2373-300C-44B8-8843-B1FE423FD866}" Name="ORG_Data_Profile.xml">
+      <DtsConnectionManagerID>ORG_Data_Profile.xml</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{0CA6B951-2425-4F09-896D-FFE7902AF619}" Name="FL88759W7_SQLExpress.WHODDE">
+      <DtsConnectionManagerID>FL88759W7_SQLExpress.WHODDE</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{02E5B28D-F210-4C86-8582-E548FD7DD3D8}" Name="Flat File MP">
+      <DtsConnectionManagerID>Flat File MP</DtsConnectionManagerID>
+    </DtsDataSource>
+    <DtsDataSource ID="{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}" Name="nasy00sql004dq.WHODDE">
+      <DtsConnectionManagerID>nasy00sql004dq.WHODDE</DtsConnectionManagerID>
+    </DtsDataSource>
+  </DataSources>
+  <DataProfileInput>
+    <ProfileMode>Exact</ProfileMode>
+    <Timeout>0</Timeout>
+    <Requests>
+      <ColumnNullRatioProfileRequest ID="NullRatioReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ORG" />
+        <Column IsWildCard="true" />
+      </ColumnNullRatioProfileRequest>
+      <ColumnStatisticsProfileRequest ID="StatisticsReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ORG" />
+        <Column IsWildCard="true" />
+      </ColumnStatisticsProfileRequest>
+      <ColumnLengthDistributionProfileRequest ID="LengthDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ORG" />
+        <Column IsWildCard="true" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+      </ColumnLengthDistributionProfileRequest>
+      <ColumnValueDistributionProfileRequest ID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ORG" />
+        <Column IsWildCard="true" />
+        <Option>FrequentValues</Option>
+        <FrequentValueThreshold>0.001</FrequentValueThreshold>
+      </ColumnValueDistributionProfileRequest>
+      <CandidateKeyProfileRequest ID="KeyReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table Schema="dbo" Table="ORG" />
+        <KeyColumns>
+          <Column IsWildCard="true" />
+        </KeyColumns>
+        <ThresholdSetting>Specified</ThresholdSetting>
+        <KeyStrengthThreshold>0.95</KeyStrengthThreshold>
+        <VerifyOutputInFastMode>false</VerifyOutputInFastMode>
+        <MaxNumberOfViolations>100</MaxNumberOfViolations>
+      </CandidateKeyProfileRequest>
+    </Requests>
+  </DataProfileInput>
+  <DataProfileOutput>
+    <Profiles>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <Column Name="Organization_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <Column Name="Name" SqlDbType="VarChar" MaxLength="80" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnNullRatioProfile ProfileRequestID="NullRatioReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <Column Name="CountryCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NullCount>0</NullCount>
+      </ColumnNullRatioProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <Column Name="Organization_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>1</MinLength>
+        <MaxLength>6</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>365</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>7015</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>1</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>3690</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>37387</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>36</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <Column Name="Name" SqlDbType="VarChar" MaxLength="80" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>2</MinLength>
+        <MaxLength>70</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>23</Length>
+            <Count>656</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>46</Length>
+            <Count>16</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>29</Length>
+            <Count>342</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>9</Length>
+            <Count>2783</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>15</Length>
+            <Count>2411</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>481</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>52</Length>
+            <Count>7</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>32</Length>
+            <Count>201</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>26</Length>
+            <Count>359</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>12</Length>
+            <Count>2486</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>35</Length>
+            <Count>147</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>63</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>6</Length>
+            <Count>3245</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>55</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>43</Length>
+            <Count>37</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>49</Length>
+            <Count>12</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>27</Length>
+            <Count>400</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>21</Length>
+            <Count>833</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>58</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>64</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>38</Length>
+            <Count>79</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>7</Length>
+            <Count>3228</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>44</Length>
+            <Count>43</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>50</Length>
+            <Count>12</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>24</Length>
+            <Count>651</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>47</Length>
+            <Count>15</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>70</Length>
+            <Count>1</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>18</Length>
+            <Count>3507</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>30</Length>
+            <Count>266</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>10</Length>
+            <Count>2761</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>61</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>41</Length>
+            <Count>35</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>4</Length>
+            <Count>1102</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>65</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>19</Length>
+            <Count>1006</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>25</Length>
+            <Count>437</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>36</Length>
+            <Count>112</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>13</Length>
+            <Count>2448</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>62</Length>
+            <Count>3</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>42</Length>
+            <Count>33</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>5</Length>
+            <Count>2745</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>56</Length>
+            <Count>5</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>22</Length>
+            <Count>801</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>59</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>33</Length>
+            <Count>236</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>39</Length>
+            <Count>68</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>16</Length>
+            <Count>2202</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>53</Length>
+            <Count>14</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>45</Length>
+            <Count>12</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>2</Length>
+            <Count>34</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>48</Length>
+            <Count>12</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>17</Length>
+            <Count>2369</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>31</Length>
+            <Count>189</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>60</Length>
+            <Count>2</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>34</Length>
+            <Count>147</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>40</Length>
+            <Count>49</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>11</Length>
+            <Count>2554</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>54</Length>
+            <Count>6</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>20</Length>
+            <Count>888</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>28</Length>
+            <Count>350</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>57</Length>
+            <Count>4</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>14</Length>
+            <Count>2487</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>37</Length>
+            <Count>118</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>8</Length>
+            <Count>3022</Count>
+          </LengthDistributionItem>
+          <LengthDistributionItem>
+            <Length>51</Length>
+            <Count>9</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <ColumnLengthDistributionProfile ProfileRequestID="LengthDistReq" IsExact="true">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <Column Name="CountryCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <IgnoreLeadingSpace>false</IgnoreLeadingSpace>
+        <IgnoreTrailingSpace>true</IgnoreTrailingSpace>
+        <MinLength>3</MinLength>
+        <MaxLength>3</MaxLength>
+        <LengthDistribution>
+          <LengthDistributionItem>
+            <Length>3</Length>
+            <Count>48497</Count>
+          </LengthDistributionItem>
+        </LengthDistribution>
+      </ColumnLengthDistributionProfile>
+      <CandidateKeyProfile IsExact="true" ProfileRequestID="KeyReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <KeyColumns>
+          <Column Name="Organization_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        </KeyColumns>
+        <IsExactKey>true</IsExactKey>
+      </CandidateKeyProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <Column Name="Organization_Id" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>48497</NumberOfDistinctValues>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <Column Name="Name" SqlDbType="VarChar" MaxLength="80" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>29154</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>Sanofi-Aventis                                                                  </Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Novo nordisk                                                                    </Value>
+            <Count>53</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Pfizer                                                                          </Value>
+            <Count>64</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Abbott                                                                          </Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Sandoz                                                                          </Value>
+            <Count>53</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Roche                                                                           </Value>
+            <Count>64</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Bayer                                                                           </Value>
+            <Count>68</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Serono                                                                          </Value>
+            <Count>58</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Ferring                                                                         </Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Alcon                                                                           </Value>
+            <Count>57</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Allergan                                                                        </Value>
+            <Count>54</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Astrazeneca                                                                     </Value>
+            <Count>63</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Lundbeck                                                                        </Value>
+            <Count>52</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GlaxoSmithKline                                                                 </Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Galderma                                                                        </Value>
+            <Count>51</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Servier                                                                         </Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>Organon                                                                         </Value>
+            <Count>50</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+      <ColumnValueDistributionProfile IsExact="true" ProfileRequestID="ValueDistReq">
+        <DataSourceID>{23581E86-852A-4E0C-9FB8-8B4829E2E9EC}</DataSourceID>
+        <Table DataSource="nasy00sql004dq" Database="WHODDE" Schema="dbo" Table="ORG" RowCount="48497" />
+        <Column Name="CountryCode" SqlDbType="VarChar" MaxLength="10" Precision="255" Scale="255" LCID="1033" CodePage="0" IsNullable="true" StringCompareOptions="0" />
+        <NumberOfDistinctValues>124</NumberOfDistinctValues>
+        <ValueDistribution>
+          <ValueDistributionItem>
+            <Value>ARM       </Value>
+            <Count>51</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DOM       </Value>
+            <Count>522</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MYS       </Value>
+            <Count>676</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VEN       </Value>
+            <Count>308</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>URY       </Value>
+            <Count>178</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>LTU       </Value>
+            <Count>994</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ARE       </Value>
+            <Count>438</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SGP       </Value>
+            <Count>596</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PRT       </Value>
+            <Count>522</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>LVA       </Value>
+            <Count>928</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GBR       </Value>
+            <Count>1172</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>HUN       </Value>
+            <Count>528</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TUN       </Value>
+            <Count>268</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PER       </Value>
+            <Count>353</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SVK       </Value>
+            <Count>545</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TWN       </Value>
+            <Count>892</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CAN       </Value>
+            <Count>824</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>UKR       </Value>
+            <Count>786</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>POL       </Value>
+            <Count>955</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ROM       </Value>
+            <Count>117</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>COL       </Value>
+            <Count>524</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>RUS       </Value>
+            <Count>1425</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AUT       </Value>
+            <Count>670</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IRL       </Value>
+            <Count>502</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ESP       </Value>
+            <Count>769</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BLR       </Value>
+            <Count>486</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SVN       </Value>
+            <Count>425</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ECU       </Value>
+            <Count>318</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SAU       </Value>
+            <Count>316</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ISR       </Value>
+            <Count>354</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NZL       </Value>
+            <Count>310</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GHA       </Value>
+            <Count>49</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>LUX       </Value>
+            <Count>313</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>JPN       </Value>
+            <Count>703</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SRB       </Value>
+            <Count>62</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BGD       </Value>
+            <Count>307</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BRA       </Value>
+            <Count>573</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ZAF       </Value>
+            <Count>357</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MEX       </Value>
+            <Count>431</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NLD       </Value>
+            <Count>737</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NOR       </Value>
+            <Count>610</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>NGA       </Value>
+            <Count>59</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>HKG       </Value>
+            <Count>697</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PRI       </Value>
+            <Count>1443</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>JOR       </Value>
+            <Count>438</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CHN       </Value>
+            <Count>2212</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>LBN       </Value>
+            <Count>694</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DNK       </Value>
+            <Count>336</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IND       </Value>
+            <Count>881</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>VNM       </Value>
+            <Count>65</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>TUR       </Value>
+            <Count>741</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>HRV       </Value>
+            <Count>165</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>N/A       </Value>
+            <Count>61</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>THA       </Value>
+            <Count>930</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>SWE       </Value>
+            <Count>734</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>GRC       </Value>
+            <Count>544</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>EGY       </Value>
+            <Count>750</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BGR       </Value>
+            <Count>505</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>IDN       </Value>
+            <Count>419</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ARG       </Value>
+            <Count>519</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>KWT       </Value>
+            <Count>307</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>BEL       </Value>
+            <Count>509</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CZE       </Value>
+            <Count>687</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>DEU       </Value>
+            <Count>2244</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>EST       </Value>
+            <Count>853</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>AUS       </Value>
+            <Count>832</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PHL       </Value>
+            <Count>906</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FRA       </Value>
+            <Count>872</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CHL       </Value>
+            <Count>199</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>KOR       </Value>
+            <Count>613</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>USA       </Value>
+            <Count>2614</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>ITA       </Value>
+            <Count>972</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>PAK       </Value>
+            <Count>941</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>CHE       </Value>
+            <Count>579</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>FIN       </Value>
+            <Count>562</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>YUG       </Value>
+            <Count>70</Count>
+          </ValueDistributionItem>
+          <ValueDistributionItem>
+            <Value>MAR       </Value>
+            <Count>322</Count>
+          </ValueDistributionItem>
+        </ValueDistribution>
+      </ColumnValueDistributionProfile>
+    </Profiles>
+  </DataProfileOutput>
+</DataProfile>
