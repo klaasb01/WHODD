@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<BCPFORMAT xmlns="http://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <RECORD>
+  <FIELD ID="1" xsi:type="CharFixed"   LENGTH="10"/>
+  <FIELD ID="2" xsi:type="CharFixed"  LENGTH="10"/>
+  <FIELD ID="3" xsi:type="CharFixed"   LENGTH="8"/>
+  <FIELD ID="4" xsi:type="CharFixed"   LENGTH="1"/>
+  <FIELD ID="5" xsi:type="CharFixed"  LENGTH="10"/>
+  <FIELD ID="6" xsi:type="CharTerm" TERMINATOR="\r\n" LENGTH="2"/>
+
+ </RECORD>
+ <ROW>
+  <COLUMN SOURCE="1" NAME="[Therapgroup_Id]"  xsi:type="SQLCHAR" />
+  <COLUMN SOURCE="2" NAME="[ATCCode]" xsi:type="SQLCHAR" />
+  <COLUMN SOURCE="3" NAME="[CreateDate]" xsi:type="SQLDATETIM4" />
+  <COLUMN SOURCE="4" NAME="[OfficialATCCode]" xsi:type="SQLCHAR" />
+  <COLUMN SOURCE="5" NAME="[Medicinalprod_Id]" xsi:type="SQLCHAR" />
+
+ </ROW>
+</BCPFORMAT>
