@@ -1,7 +1,7 @@
 USE [WHODDE]
 GO
 
-/****** Object:  Table [dbo].[PP]    Script Date: 12/30/2015 10:48:35 AM ******/
+/****** Object:  Table [dbo].[PP]    Script Date: 1/5/2016 9:28:33 AM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -17,7 +17,11 @@ CREATE TABLE [dbo].[PP](
 	[RouteOfAdministration] [varchar](10) NULL,
 	[Medicinalprod_Id] [varchar](10) NOT NULL,
 	[NumberOfIngredients] [varchar](2) NULL,
-	[CreateDate] [smalldatetime] NULL
+	[CreateDate] [smalldatetime] NULL,
+ CONSTRAINT [PK_PP] PRIMARY KEY CLUSTERED 
+(
+	[Pharmproduct_Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
